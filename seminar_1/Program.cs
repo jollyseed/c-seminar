@@ -1,5 +1,7 @@
-﻿int a = 2;
-int b = 10;
+﻿Console.Write("Введите первое число: ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите второе число: ");
+int b = Convert.ToInt32(Console.ReadLine());
 if (b == a * a)
 {
     Console.WriteLine("Да");
