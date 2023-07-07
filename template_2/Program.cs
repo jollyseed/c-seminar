@@ -84,6 +84,64 @@ class Program
                                  + $" Остаток от деления равен {div}");
             }
         }
-        Task12();
+
+
+        void Task16()
+        {
+            // 16. Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число 
+            //квадратом другого.
+
+            int Input(string text)
+            {
+                Console.Write(text);
+                return Convert.ToInt32(Console.ReadLine());
+            }
+
+            int number_f = Input("Введите первое число: ");
+            int number_s = Input("Введите второе число: ");
+
+
+            if (number_f == number_s * number_s)
+            {
+                Console.WriteLine($"Число {number_f} является квадратом {number_s}");
+            }
+            else if (number_s == number_f * number_f)
+                {
+                Console.WriteLine($"Число {number_s} является квадратом {number_f}");
+                }
+                else Console.WriteLine($"Числа {number_f} и {number_s} не являются квадратами друг друга");
+
+        }
+
+         
+
+        void Task16_1()
+        {
+            // 16. Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число 
+            //квадратом другого.
+
+            int Input(string text)
+            {
+                Console.Write(text);
+                return Convert.ToInt32(Console.ReadLine());
+            }
+
+            int number_f = Input("Введите первое число: ");
+            int number_s = Input("Введите второе число: ");
+
+
+            if (number_f == number_s * number_s || number_s == number_f * number_f)
+            {
+                Console.WriteLine("Является квадратом");
+            }
+            else Console.WriteLine("НЕ является квадратом");
+
+        }
+
+        Task16_1();
+
     }
+
+
 }
+
