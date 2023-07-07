@@ -42,7 +42,7 @@ void Task4()
         max = c;
     }
 
-    Console.Write($"Максимальное число {max}");
+    Console.Write("Максимальное число " + max);
 }
 
 void Task6()
@@ -61,6 +61,24 @@ void Task6()
     {
         Console.Write("Число нечетное");
     }
-    
+
 }
-Task6();
+
+void Task8()
+{
+    //Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+
+    Console.Write("Введите число: ");
+    int a = Convert.ToInt32(Console.ReadLine());
+    int counter = 1;
+
+    while (counter <= a)
+    {
+        if (counter % 2 == 0)
+        Console.Write(counter + "," + " ");
+        counter++;
+    }
+    
+
+}
+Task8();
