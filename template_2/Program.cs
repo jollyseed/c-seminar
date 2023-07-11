@@ -222,7 +222,7 @@ class Program
             int x2 = Input("Введите x второй точки: ");
             int y2 = Input("Введите y второй точки: ");
 
-            double dist = Math.Sqrt(Math.Pow((x1-x2), 2) + Math.Pow((y1-y2), 2));
+            double dist = Math.Sqrt(Math.Pow((x1 - x2), 2) + Math.Pow((y1 - y2), 2));
             dist = Math.Round(dist, 2);
 
             Console.WriteLine($"Расстояние между точками = {dist}.");
@@ -240,17 +240,65 @@ class Program
                 return Convert.ToInt32(Console.ReadLine());
             }
             int a = Input("Введите число: ");
-            int counter = 1;
-            while (counter <= a)
+
+            //while (counter <= a)
+            //{
+            //   Console.Write($"{counter*counter}, ");
+            //  counter++;
+            // }
+            for (int i = 1; i <= a; i++)
             {
-                 Console.Write($"{counter*counter}, ");
-                 counter++;
+                Console.WriteLine($"{i}^2 = {Math.Pow(i, 2)}");
             }
 
-            
         }
-        
-        Task22();
+
+        // Task9();
+        // Task11();
+        // Task12();
+        // Task14();
+        // Task16();
+        // Task17();
+        // Task18();
+        // Task21();
+        // Task22();
+        int Input(string text)
+        {
+            Console.Write(text);
+            return Convert.ToInt32(Console.ReadLine());
+        }
+        int task = Input("Введите номер задачи: ");
+        switch (task)
+        {
+            case 17:
+                Task17();
+                break;
+            case 18:
+                Task18();
+                break;
+            case 21:
+                Task21();
+                break;
+            case 22:
+                Task22();
+                break;
+            case 9:
+                Task9();
+                break;
+            case 11:
+                Task11();
+                break;
+            case 12:
+                Task12();
+                break;
+            case 14:
+                Task14();
+                break;
+
+            default:
+                Console.WriteLine("Нет такой задачи");
+                break;
+        }
 
     }
 
