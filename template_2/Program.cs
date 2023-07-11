@@ -172,7 +172,7 @@ class Program
                 Console.WriteLine("Точка лежит на оси");
             }
         }
-    void Task18()
+        void Task18()
         {
             // 18.  Напишите программу, которая по заданному номеру четверти, показывает 
             // диапазон возможных координат точек в этой четверти (x и y).
@@ -183,7 +183,7 @@ class Program
                 return Convert.ToInt32(Console.ReadLine());
             }
             int a = Input("Введите номер четверти: ");
-            
+
             if (a == 1)
             {
                 Console.WriteLine("x > 0 и y > 0");
@@ -206,7 +206,51 @@ class Program
             }
         }
 
-        Task18();
+        void Task21()
+        {
+            // 21.  Напишите программу, которая принимает на вход координаты двух точек 
+            // и находит расстояние между ними в 2D пространстве.
+
+
+            int Input(string text)
+            {
+                Console.Write(text);
+                return Convert.ToInt32(Console.ReadLine());
+            }
+            int x1 = Input("Введите x первой точки: ");
+            int y1 = Input("Введите y первой точки: ");
+            int x2 = Input("Введите x второй точки: ");
+            int y2 = Input("Введите y второй точки: ");
+
+            double dist = Math.Sqrt(Math.Pow((x1-x2), 2) + Math.Pow((y1-y2), 2));
+            dist = Math.Round(dist, 2);
+
+            Console.WriteLine($"Расстояние между точками = {dist}.");
+        }
+
+        void Task22()
+        {
+            // 22.  Напишите программу, которая принимает на вход число (N) 
+            //и выдаёт таблицу квадратов чисел от 1 до N.
+
+
+            int Input(string text)
+            {
+                Console.Write(text);
+                return Convert.ToInt32(Console.ReadLine());
+            }
+            int a = Input("Введите число: ");
+            int counter = 1;
+            while (counter <= a)
+            {
+                 Console.Write($"{counter*counter}, ");
+                 counter++;
+            }
+
+            
+        }
+        
+        Task22();
 
     }
 
