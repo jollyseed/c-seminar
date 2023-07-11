@@ -137,8 +137,42 @@ class Program
             else Console.WriteLine("НЕ является квадратом");
 
         }
+        void Task17()
+        {
+            // 17. Напишите программу, которая принимает на вход координаты точки (X и Y), 
+            // причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, в которой находится эта точка.
 
-        Task16_1();
+             int Input(string text)
+            {
+                Console.Write(text);
+                return Convert.ToInt32(Console.ReadLine());
+            }
+            int x = Input("Введите x: ");
+            int y = Input("Введите y: ");
+
+            if (x > 0 && y > 0)
+            {
+                Console.WriteLine("Точка принадлежит 1 четверти");
+            }
+            else if (x < 0 && y > 0)
+            {
+                Console.WriteLine("Точка принадлежит 2 четверти");
+            }
+             else if (x < 0 && y < 0)
+            {
+                Console.WriteLine("Точка принадлежит 3 четверти");
+            }
+            else if (x > 0 && y < 0)
+            {
+                Console.WriteLine("Точка принадлежит 4 четверти");
+            }
+            else 
+            {
+                Console.WriteLine("Точка лежит на оси");
+            }
+        }
+
+        Task17();
 
     }
 
