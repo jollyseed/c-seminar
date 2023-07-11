@@ -106,14 +106,14 @@ class Program
                 Console.WriteLine($"Число {number_f} является квадратом {number_s}");
             }
             else if (number_s == number_f * number_f)
-                {
+            {
                 Console.WriteLine($"Число {number_s} является квадратом {number_f}");
-                }
-                else Console.WriteLine($"Числа {number_f} и {number_s} не являются квадратами друг друга");
+            }
+            else Console.WriteLine($"Числа {number_f} и {number_s} не являются квадратами друг друга");
 
         }
 
-         
+
 
         void Task16_1()
         {
@@ -137,12 +137,13 @@ class Program
             else Console.WriteLine("НЕ является квадратом");
 
         }
+
         void Task17()
         {
             // 17. Напишите программу, которая принимает на вход координаты точки (X и Y), 
             // причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, в которой находится эта точка.
 
-             int Input(string text)
+            int Input(string text)
             {
                 Console.Write(text);
                 return Convert.ToInt32(Console.ReadLine());
@@ -158,7 +159,7 @@ class Program
             {
                 Console.WriteLine("Точка принадлежит 2 четверти");
             }
-             else if (x < 0 && y < 0)
+            else if (x < 0 && y < 0)
             {
                 Console.WriteLine("Точка принадлежит 3 четверти");
             }
@@ -166,13 +167,46 @@ class Program
             {
                 Console.WriteLine("Точка принадлежит 4 четверти");
             }
-            else 
+            else
             {
                 Console.WriteLine("Точка лежит на оси");
             }
         }
+    void Task18()
+        {
+            // 18.  Напишите программу, которая по заданному номеру четверти, показывает 
+            // диапазон возможных координат точек в этой четверти (x и y).
 
-        Task17();
+            int Input(string text)
+            {
+                Console.Write(text);
+                return Convert.ToInt32(Console.ReadLine());
+            }
+            int a = Input("Введите номер четверти: ");
+            
+            if (a == 1)
+            {
+                Console.WriteLine("x > 0 и y > 0");
+            }
+            else if (a == 2)
+            {
+                Console.WriteLine("x < 0 и y > 0");
+            }
+            else if (a == 3)
+            {
+                Console.WriteLine("x < 0 и y < 0");
+            }
+            else if (a == 4)
+            {
+                Console.WriteLine("x > 0 и y < 0");
+            }
+            else
+            {
+                Console.WriteLine("Нет такой оси");
+            }
+        }
+
+        Task18();
 
     }
 
