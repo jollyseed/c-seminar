@@ -17,7 +17,7 @@ void Task19()
 
     if (main > 9999 && main < 100000 && a1 == a5 && a2 == a4)
     {
-        Console.WriteLine($"Число {main} - палиндромом");
+        Console.WriteLine($"Число {main} - палиндром");
     }
     else if (main < 9999 || main > 99999)
     {
@@ -25,7 +25,7 @@ void Task19()
     }
     else
     {
-        Console.WriteLine($"Число {main} - не палиндромом");
+        Console.WriteLine($"Число {main} - не палиндром");
     }
 
 }
@@ -61,6 +61,6 @@ void Task23()
 
 
 
-// Task19();
+Task19();
 // Task21();
 // Task23();
