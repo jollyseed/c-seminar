@@ -10,12 +10,12 @@ void Task19()
     // 19  Напишите программу, которая принимает на вход число (N) 
     //и выдаёт таблицу квадратов чисел от 1 до N.
     int main = Input("Введите пятизначное число: ");
-    int a = main / 10000;
-    int b = main % 10;
-    int c = main / 1000 % 10;
-    int d = main / 10 % 10;
+    int a1 = main / 10000;
+    int a5 = main % 10;
+    int a2 = main / 1000 % 10;
+    int a4 = main / 10 % 10;
 
-    if (main > 9999 && main < 100000 && a == b && c == d)
+    if (main > 9999 && main < 100000 && a1 == a5 && a2 == a4)
     {
         Console.WriteLine($"Число {main} - палиндромом");
     }
@@ -58,6 +58,9 @@ void Task23()
 
 
 }
+
+
+
 // Task19();
 // Task21();
-Task23();
+// Task23();
