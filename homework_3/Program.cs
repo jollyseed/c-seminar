@@ -29,5 +29,20 @@ void Task19()
     }
 
 }
-// void Task()
-Task19();
+void Task21()
+{
+    // Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+    int x1 = Input("Введите x первой точки: ");
+    int y1 = Input("Введите y первой точки: ");
+    int z1 = Input("Введите z первой точки: ");
+    int x2 = Input("Введите x второй точки: ");
+    int y2 = Input("Введите y второй точки: ");
+    int z2 = Input("Введите z второй точки: ");
+
+    double dist = Math.Sqrt(Math.Pow((x1 - x2), 2) + Math.Pow((y1 - y2), 2) + Math.Pow((z1 - z2), 2));
+    dist = Math.Round(dist, 2);
+
+    Console.WriteLine($"Расстояние между точками = {dist}.");
+}
+// Task19();
+Task21();
